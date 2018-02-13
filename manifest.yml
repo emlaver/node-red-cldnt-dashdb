@@ -1,10 +1,7 @@
 applications:
 - memory: 512M
-  services:
-  - sample-node-red-cloudantNoSQLDB
-  env:
-    NODE_RED_STORAGE_NAME: sample-node-red-cloudantNoSQLDB
-declared-services:
-  sample-node-red-cloudantNoSQLDB:
-    label: cloudantNoSQLDB
-    plan:  Lite
+  instances: 1
+  domain: mybluemix.net
+  name: node-red-cldnt-to-dashdb
+  host: node-red-cldnt-to-dashdb
+  disk_quota: 512M
